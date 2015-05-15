@@ -1,0 +1,222 @@
+/* Move down content because we have a fixed navbar that is 50px tall */
+body {
+    padding-top: 50px;
+    padding-bottom: 20px;
+}
+
+/* Set widths on the navbar form inputs since otherwise they're 100% wide */
+.navbar-form input[type="text"],
+.navbar-form input[type="password"] {
+    width: 180px;
+}
+
+/* Wrapping element */
+/* Set some basic padding to keep content from hitting the edges */
+.body-content {
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+/* Responsive: Portrait tablets and up */
+@media screen and (min-width: 768px) {
+    /* Let the jumbotron breathe */
+    .jumbotron {
+        margin-top: 20px;
+    }
+    /* Remove padding from wrapping element since we kick in the grid classes here */
+    .body-content {
+        padding: 0;
+    }
+}
+
+.homepage-icon {
+    font-size: 0.70em;
+}
+
+.navbar-brand {
+
+    font-size: 20px;
+    font-family: 'Lora';
+    letter-spacing: 0.75px;
+
+}
+
+.navbar-brand .icon-sign-blank {
+
+    padding: 0px 1.5px 0px 0px;  //top right bottom left
+    //font-size: 3px;
+}
+
+
+.navbar-inverse .navbar-brand{
+    color: #ffffff;
+}
+
+
+.nav {
+    font-size: 16px;
+}
+
+
+
+
+.jumbotron {
+    margin-bottom: -7px;
+    margin-top: 30px;
+    padding: 60px;
+    background-image: url(../img/gray_buildings_paid_45pct.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.jumbotron h1 {
+    font-size: 36px;
+    font-weight: bolder;
+}
+
+#tagline1 {
+    font-weight: bold;
+}
+
+#hero-bounce2 {
+    color: #0769AD;
+    opacity: 0.0;
+    font-size: 40px;
+    font-weight: 500;
+}
+#hero-bounce1 {
+    font-weight: 400;
+}
+.alert {
+    font-size: 16px;
+    padding: 8px 35px 8px 14px;
+    line-height: 18px;
+
+}
+
+
+
+/*
+ * Side navigation
+ *
+ * Scrollspy and affixed enhanced navigation to highlight sections and secondary
+ * sections of docs content.
+ */
+
+/* By default it's not affixed in mobile views, so undo that */
+.bs-sidebar.affix {
+    position: static;
+}
+
+/* First level of nav */
+.bs-sidenav {
+   /*  margin-top: 35px; */
+    margin-bottom: 30px;
+    padding-top:    10px;
+    padding-bottom: 10px;
+    text-shadow: 0 1px 0 #fff;
+    background-color: #F7F7F9;
+    border-radius: 5px;
+}
+
+/* All levels of nav */
+.bs-sidebar .nav > li > a {
+    display: block;
+    color: #716b7a;
+    padding: 5px 20px;
+}
+.bs-sidebar .nav > li > a:hover,
+.bs-sidebar .nav > li > a:focus {
+    text-decoration: none;
+    background-color: #ECECEC;
+    border-right: 1px solid #dbd8e0;
+}
+.bs-sidebar .nav > .active > a,
+.bs-sidebar .nav > .active:hover > a,
+.bs-sidebar .nav > .active:focus > a {
+    font-weight: bold;
+    color: #563d7c;
+    background-color: transparent;
+    border-right: 1px solid #563d7c;
+}
+
+/* Nav: second level (shown on .active) */
+.bs-sidebar .nav .nav {
+    display: none; /* Hide by default, but at >768px, show it */
+    margin-bottom: 8px;
+}
+.bs-sidebar .nav .nav > li > a {
+    padding-top:    3px;
+    padding-bottom: 3px;
+    padding-left: 30px;
+    font-size: 90%;
+}
+
+/* Show and affix the side nav when space allows it */
+@media screen and (min-width: 992px) {
+    .bs-sidebar .nav > .active > ul {
+        display: block;
+    }
+    /* Widen the fixed sidebar */
+    .bs-sidebar.affix,
+    .bs-sidebar.affix-bottom {
+        width: 213px;
+    }
+    .bs-sidebar.affix {
+        position: fixed; /* Undo the static from mobile first approach */
+        top: 80px;
+    }
+    .bs-sidebar.affix-bottom {
+        position: absolute; /* Undo the static from mobile first approach */
+    }
+    .bs-sidebar.affix-bottom .bs-sidenav,
+    .bs-sidebar.affix .bs-sidenav {
+        margin-top: 0;
+        margin-bottom: 0;
+    }
+}
+@media screen and (min-width: 1200px) {
+    /* Widen the fixed sidebar again */
+    .bs-sidebar.affix-bottom,
+    .bs-sidebar.affix {
+        width: 263px;
+    }
+}
+/* Space things out */
+.bs-docs-section + .bs-docs-section {
+    padding-top: 10px;
+    padding-top: 10px;
+}
+
+.img-responsive-half {
+    max-width: 50%;
+    height: auto;
+}
+
+.img-responsive-threequarters {
+    max-width: 75%;
+    height: auto;
+}
+.img-responsive-onequarter {
+    max-width: 25%;
+    height: auto;
+}
+/* 
+
+.logo {
+  width: 120px;
+  margin-top: -5px;
+  margin-bottom: 1px;
+  padding-top: -5px;
+  padding-bottom: -2px;
+}
+ */
+
+
+
+
+
+
+
+
+
