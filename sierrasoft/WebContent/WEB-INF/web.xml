@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<web-app xmlns="http://java.sun.com/xml/ns/j2ee"
+     xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+     xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd"
+     version="2.5">
+<display-name>SierraSoftCorp</display-name> 
+        <description>Web.xml configuration file for AngularJS Port</description> 
+
+        <!-- This app is cluster-ready --> 
+        <distributable /> 
+
+        <!-- Set timeout to 120 minutes --> 
+        <session-config> 
+                <session-timeout>120</session-timeout> 
+        </session-config> 
+
+
+        <!-- ========================================================== --> 
+        <!-- Custom Tag Libraries --> 
+        <!-- ========================================================== --> 
+
+        <!-- Taglib declarations are no longer required since JSP 2.0, see Removing taglib from web.xml --> 
+        <!-- The <taglib> did not need to be a child of <jsp-config> in earlier versions but is required as of Tomcat 7 --> 
+        <!-- Note that you can only have one <jsp-config> element per web.xml --> 
+        <!-- 
+        <jsp-config> 
+                <taglib> 
+                        <taglib-uri>mytags</taglib-uri> 
+                        <taglib-location>/WEB-INF/jsp/mytaglib.tld</taglib-location> 
+                </taglib> 
+        </jsp-config> 
+        --> 
+
+
+        <!-- ========================================================== --> 
+        <!-- JSP Configuration --> 
+        <!-- ========================================================== --> 
+
+        <jsp-config> 
+                <jsp-property-group> 
+                        <url-pattern>*.html</url-pattern> 
+                </jsp-property-group> 
+        </jsp-config> 
+
+
+        <!-- ========================================================== --> 
+        <!-- Context Parameters --> 
+        <!-- ========================================================== --> 
+
+        <context-param> 
+                <description>Enable debugging for the application</description> 
+                <param-name>debug</param-name> 
+                <param-value>true</param-value> 
+        </context-param> 
+        <context-param> 
+                <description>The email address of the administrator, used to send error reports.</description> 
+                <param-name>webmaster</param-name> 
+                <param-value>address@somedomain.com</param-value> 
+        </context-param> 
+
+
+
+
+        <!-- ========================================================== --> 
+        <!-- Servlets --> 
+        <!-- ========================================================== --> 
+
+        <!-- Simple Servlet, provide a name, class, description and map to URL /servlet/SimpleServlet --> 
+<!--         <servlet> 
+                <servlet-name>Simple</servlet-name> 
+                <servlet-class>SimpleServlet</servlet-class> 
+                <description>This is a simple Hello World servlet</description> 
+        </servlet> 
+        <servlet-mapping> 
+                <servlet-name>Simple</servlet-name> 
+                <url-pattern>/servlet/SimpleServlet</url-pattern> 
+        </servlet-mapping>  -->
+
+        <!-- Define an error handler for 404 pages --> 
+        <error-page> 
+                <error-code>404</error-code> 
+                <location>/error404.jsp</location> 
+        </error-page> 
+
+        <!-- Define an error handler for java.lang.Throwable --> 
+        <error-page> 
+                <exception-type>java.lang.Throwable</exception-type> 
+                <location>/errorThrowable.jsp</location> 
+        </error-page> 
+
+        <!-- ========================================================== --> 
+        <!-- Welcome Files --> 
+        <!-- ========================================================== --> 
+
+        <!-- Define, in order of preference, which file to show when no filename is defined in the path --> 
+        <!-- eg: when user goes to http://yoursite.com/ or http://yoursite.com/somefolder --> 
+        <!-- Defaults are provided in the server-wide web.xml file, such as index.jsp, index.htm --> 
+        <!-- Note: using this tag overrides the defaults, so don't forget to add them here --> 
+        <welcome-file-list> 
+                <!-- Use index.swf if present, or splash.jsp, otherwise just look for the normal defaults --> 
+                <welcome-file>index.html</welcome-file> 
+        </welcome-file-list> 
+</web-app>
